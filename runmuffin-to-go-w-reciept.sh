@@ -11,7 +11,6 @@ export LD_LIBRARY_PATH
 
 printf "#!/bin/sh
 
-#SBATCH --ntasks-per-node=40     # Tasks per node
 #SBATCH --nodes=1                # Number of nodes requested
 #SBATCH --time=48:00:00
 #SBATCH --mail-user=$1
