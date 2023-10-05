@@ -8,6 +8,7 @@ git clone https://github.com/richardstockey/cgenie.muffin.mix.git
 
 To install cGENIE and its code dependencies on your machine, change to the cgenie.muffin.mix directory and run:
 chmod +x cGENIE.setup.sh
+
 ./cGENIE.setup.sh
 
 Follow the interactive instructions. Note that the UBUNTU version is currently still in development (20230829), but could be pieced together by running the code interactively yourself. 
