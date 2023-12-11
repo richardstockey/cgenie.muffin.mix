@@ -7,6 +7,10 @@ The whole folder can be downloaded to your $HOME directory with:
 git clone https://github.com/richardstockey/cgenie.muffin.mix.git
 
 To install cGENIE and its code dependencies on your machine, change to the cgenie.muffin.mix directory and run:
+module load gcc/6.4.0; 
+module load gnumake; 
+LD_LIBRARY_PATH=/home/$USER/lib; 
+export LD_LIBRARY_PATH; 
 chmod +x cGENIE.setup.sh; 
 ./cGENIE.setup.sh
 
@@ -33,3 +37,10 @@ Then you can excecute runmuffin-to-go-w-reciept.sh as:
 
 Any issues - please contact Rich Stockey on r.g.stockey@soton.ac.uk
 
+If things are failing, you may be having issues with the gfortran (and other libraries that you're calling), and whether the versions used to build the legacy netcdf libraries that cGENIE requires are the same as the versions that you have loaded when running cGENIE. If in doubt, in every new session, run: 
+module load gcc/6.4.0; 
+module load gnumake; 
+LD_LIBRARY_PATH=/home/$USER/lib; 
+export LD_LIBRARY_PATH; 
+
+This is especially important to do before running cGENIE.setup.sh!
