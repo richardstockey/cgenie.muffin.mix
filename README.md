@@ -4,9 +4,11 @@ A toolbox for getting cGENIE running on your favo[u]rite computer
 This recipe kit is designed to reduce the challenges to running cGENIE on RedHat HPC facilities and UBUNTU workstations. 
 
 The whole folder can be downloaded to your $HOME directory with:
+
 git clone https://github.com/richardstockey/cgenie.muffin.mix.git
 
 To install cGENIE and its code dependencies on your machine, change to the cgenie.muffin.mix directory and run:
+
 module load gcc/6.4.0; 
 module load gnumake; 
 LD_LIBRARY_PATH=/home/$USER/lib; 
