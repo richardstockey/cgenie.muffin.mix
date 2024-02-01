@@ -34,8 +34,8 @@ Then, runmuffin-to-go.sh will work exactly like runmuffin.sh and can be executed
 runmuffin-to-go-w-reciept.sh works the same way as runmuffin-to-go.sh but will send you email updates on the progress of your jobs. 
 Again, before running for the first time, move the file to your cgenie.muffin/genie-main directory and run chmod +x to change your permissions. 
 
-Then you can excecute runmuffin-to-go-w-reciept.sh as:
-./runmuffin-to-go-w-reciept.sh [email-address] [base-config] [user-config directory] [model-years] [restart-if-applicable]
+Then you can excecute runmuffin-to-go-w-receipt.sh as:
+./runmuffin-to-go-w-receipt.sh [email-address] [base-config] [user-config directory] [model-years] [restart-if-applicable]
 
 Any issues - please contact Rich Stockey on r.g.stockey@soton.ac.uk
 
