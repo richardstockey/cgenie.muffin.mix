@@ -4,7 +4,7 @@
 cd $HOME
 
 ### Establishing where we are installing ###
-echo "Hi there, are you trying to install cGENIE on a HPC user account (Iridis/Lyceum at Southampton) or a local Ubuntu machine [hpc/local]?"
+echo "Hi there, are you trying to install cGENIE on a HPC user account (Iridis/Lyceum at Southampton) or a local Ubuntu machine (NOTE - you must accurately type one of the options in the square brackets for all questions) [hpc/local]?"
 read machine
 echo "Great - running setup for $machine!"
 sleep 1s
@@ -256,6 +256,10 @@ then
 LD_LIBRARY_PATH=$HOME/lib
 export LD_LIBRARY_PATH
 fi
+
+# make cgenie.jobs directory
+cd ~
+mkdir cgenie.jobs
 
 ### Testing cGENIE ###
 echo "*** We will now test whether cGENIE is running properly on your machine - cross your fingers! ***"
