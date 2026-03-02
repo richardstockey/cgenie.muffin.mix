@@ -46,3 +46,14 @@ LD_LIBRARY_PATH=/home/$USER/lib;
 export LD_LIBRARY_PATH; 
 
 This is especially important to do before running cGENIE.setup.sh!
+
+# Notes on IRIDIS 6 (beta version)
+
+1. clone a version of cgenie.muffin into your $HOME directory
+2. run cGENIE.setup.iridis6.sh from cgenie.muffin.mix
+3. run 'module load gcc/13.2.0; LD_LIBRARY_PATH=/home/$USER/lib; export LD_LIBRARY_PATH;' from your home directory
+4. test cgenie muffin (from cgenie.muffin/genie-main, run 'make cleanall; make testbiogem')
+5. if you encounter issues, check user.mak was updated by cGENIE.setup.iridis6.sh
+
+
+

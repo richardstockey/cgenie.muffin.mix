@@ -3,6 +3,9 @@
 
 cd $HOME
 
+echo "Hi there, this script assumes you are trying to get cgenie.muffin set up on IRIDIS 6."
+echo "If you do not have a version of cgenie.muffin *already* cloned into your home directory, quit and start again."
+
 module purge
 module load gcc/13.2.0
 export CFLAGS="-std=c11 -D_GNU_SOURCE"
@@ -80,6 +83,9 @@ make -j4
 make install
 
 cd $HOME
+
+cp $HOME/cgenie.muffin.mix/user.mak $HOME/cgenie.muffin/genie-main/user.mak
+echo "We have also copied a new version of user.mak into cgenie.muffin/genie-main"
 
 # Set base paths for your NetCDF installations
 export NETCDF_C_HOME=$HOME/netcdf-c-4.6.1
