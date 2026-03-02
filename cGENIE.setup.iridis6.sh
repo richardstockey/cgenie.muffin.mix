@@ -84,7 +84,7 @@ make install
 
 cd $HOME
 
-cp $HOME/cgenie.muffin.mix/user.mak $HOME/cgenie.muffin/genie-main/user.mak
+cp $HOME/cgenie.muffin.mix/user-iridis6.mak $HOME/cgenie.muffin/genie-main/user.mak
 echo "We have also copied a new version of user.mak into cgenie.muffin/genie-main"
 
 # Set base paths for your NetCDF installations

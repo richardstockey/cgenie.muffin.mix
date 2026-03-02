@@ -52,9 +52,12 @@ This is especially important to do before running cGENIE.setup.sh!
 1. clone a version of cgenie.muffin into your $HOME directory
 2. checkout the master.python3 branch, or your own bespoke version of it (this is important because IRIDIS 6 does not run python 2)
 3. run cGENIE.setup.iridis6.sh from cgenie.muffin.mix
-4. run 'module load gcc/13.2.0; LD_LIBRARY_PATH=/home/$USER/lib; export LD_LIBRARY_PATH;' from your home directory
-5. test cgenie muffin (from cgenie.muffin/genie-main, run 'make cleanall; make testbiogem')
-6. if you encounter issues, check user.mak was updated by cGENIE.setup.iridis6.sh
+4. run "cp $HOME/cgenie.muffin.mix/runmuffin-to-go-w-receipt.sh $HOME/cgenie.muffin/genie-main/runmuffin-to-go-w-receipt.sh;
+chmod +x runmuffin-to-go-w-receipt.sh; cp $HOME/cgenie.muffin.mix/runmuffin-to-go.sh $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh;
+chmod +x runmuffin-to-go.sh" from cgenie.muffin/genie-main.
+5. run 'module load python/3.12; module load gcc/13.2.0; LD_LIBRARY_PATH=/home/$USER/lib; export LD_LIBRARY_PATH;'
+6. test cgenie muffin (from cgenie.muffin/genie-main, run 'make cleanall; make testbiogem')
+7. if you encounter issues, check user.mak was updated by cGENIE.setup.iridis6.sh
 
 
 
