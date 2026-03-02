@@ -16,8 +16,8 @@ printf "#!/bin/sh
 #SBATCH --mail-user=$1
 #SBATCH --mail-type=BEGIN,END,FAIL
 
-module load gcc/6.4.0
-module load gnumake
+module load python/3.12
+module load gcc/13.2.0
 
 LD_LIBRARY_PATH=$HOME/lib
 export LD_LIBRARY_PATH
