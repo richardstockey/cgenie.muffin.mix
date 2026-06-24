@@ -155,4 +155,5 @@ chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
 
 echo "testing cGENIE.muffin..."
 cd cgenie.muffin/genie-main
+make cleanall
 make testbiogem
