@@ -10,49 +10,6 @@ module purge
 module load gcc/13.2.0
 export CFLAGS="-std=c11 -D_GNU_SOURCE"
 
-########################################
-# PYTHON 2.7.18
-########################################
-
-cd $HOME
-
-echo "Installing local Python 2.7.18..."
-
-rm -rf Python-2.7.18 Python-2.7.18.tgz python2.7
-
-wget https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tgz
-tar xzf Python-2.7.18.tgz
-cd Python-2.7.18
-
-./configure \
-    --prefix=$HOME/python2.7
-
-make -j4
-make install
-
-export PYTHON2_HOME=$HOME/python2.7
-export PATH="$PYTHON2_HOME/bin:$PATH"
-
-echo "Installed:"
-python2.7 --version
-
-cd $HOME
-
-mkdir -p $HOME/bin
-
-cat > $HOME/bin/python << 'EOF'
-#!/bin/bash
-exec $HOME/python2.7/bin/python2.7 "$@"
-EOF
-
-chmod +x $HOME/bin/python
-
-export PATH="$HOME/bin:$PATH"
-
-########################################
-# Netcdf libraries
-########################################
-
 rm -rf netcdf-c-4.6.1 v4.6.1.tar.gz
 wget https://github.com/Unidata/netcdf-c/archive/refs/tags/v4.6.1.tar.gz
 tar xzf v4.6.1.tar.gz
@@ -146,9 +103,3 @@ export LD_LIBRARY_PATH="$NETCDF_C_HOME/lib:$NETCDF_CXX_HOME/lib:$NETCDF_FORTRAN_
 
 # Optional: add binaries to PATH if you want to use netcdf tools directly
 export PATH="$NETCDF_C_HOME/bin:$NETCDF_CXX_HOME/bin:$NETCDF_FORTRAN_HOME/bin:$PATH"
-
-# copy key functions over for running the model
-cp $HOME/cgenie.muffin.mix/runmuffin-to-go-w-receipt.sh $HOME/cgenie.muffin/genie-main/runmuffin-to-go-w-receipt.sh
-chmod +x runmuffin-to-go-w-receipt.sh
-cp $HOME/cgenie.muffin.mix/runmuffin-to-go.sh $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
-chmod +x runmuffin-to-go.sh
