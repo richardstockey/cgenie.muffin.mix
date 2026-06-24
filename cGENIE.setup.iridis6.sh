@@ -9,6 +9,8 @@ echo "If you do not have a version of cgenie.muffin *already* cloned into your h
 module purge
 module load gcc/13.2.0
 export CFLAGS="-std=c11 -D_GNU_SOURCE"
+export FC=gfortran
+export CC=gcc
 
 ########################################
 # PYTHON 2.7.18
@@ -66,7 +68,7 @@ sed -i '/#include <stdio.h>/a #include <ctype.h>' ncdump/ocprint.c
 
 
 # Reconfigure with separate install prefix
-./configure --prefix=$HOME --disable-netcdf-4
+./configure --disable-netcdf-4
 make -j4
 make install
 
@@ -92,7 +94,7 @@ cd netcdf-cxx-4.2
 make distclean  # just in case
 
 # Configure with explicit install path
-./configure --prefix=$HOME
+./configure
 
 # Build and install
 make -j4
@@ -119,7 +121,7 @@ cd netcdf-fortran-4.4.4
 make distclean  # just in case
 
 # Configure with install prefix and NetCDF C path
-./configure --prefix=$HOME
+./configure
 
 # Build and install
 make -j4
