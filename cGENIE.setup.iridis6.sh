@@ -68,14 +68,15 @@ sed -i '/#include <stdio.h>/a #include <ctype.h>' ncdump/ocprint.c
 
 
 # Reconfigure with separate install prefix
-./configure --disable-netcdf-4
+./configure --prefix=$HOME --disable-netcdf-4
 make -j4
 make install
 
 cd $HOME
 
 # Set paths to NetCDF-C (must already be installed)
-export NETCDF_HOME=$HOME/netcdf-c-4.6.1
+#export NETCDF_HOME=$HOME/netcdf-c-4.6.1
+export NETCDF_HOME=$HOME
 export PATH="$NETCDF_HOME/bin:$PATH"
 export LD_LIBRARY_PATH="$NETCDF_HOME/lib:$LD_LIBRARY_PATH"
 export LIBRARY_PATH="$NETCDF_HOME/lib:$LIBRARY_PATH"
@@ -94,7 +95,7 @@ cd netcdf-cxx-4.2
 make distclean  # just in case
 
 # Configure with explicit install path
-./configure
+./configure --prefix=$HOME
 
 # Build and install
 make -j4
@@ -106,7 +107,8 @@ cd $HOME
 module purge
 module load gcc/13.2.0
 
-export NETCDF_HOME=$HOME/netcdf-c-4.6.1
+#export NETCDF_HOME=$HOME/netcdf-c-4.6.1
+export NETCDF_HOME=$HOME
 export CPPFLAGS="-I$NETCDF_HOME/include"
 export LDFLAGS="-L$NETCDF_HOME/lib"
 export LD_LIBRARY_PATH="$NETCDF_HOME/lib:$LD_LIBRARY_PATH"
@@ -121,7 +123,7 @@ cd netcdf-fortran-4.4.4
 make distclean  # just in case
 
 # Configure with install prefix and NetCDF C path
-./configure
+./configure --prefix=$HOME
 
 # Build and install
 make -j4
@@ -133,9 +135,14 @@ cp $HOME/cgenie.muffin.mix/user-iridis6.mak $HOME/cgenie.muffin/genie-main/user.
 echo "We have also copied a new version of user.mak into cgenie.muffin/genie-main"
 
 # Set base paths for your NetCDF installations
-export NETCDF_C_HOME=$HOME/netcdf-c-4.6.1
-export NETCDF_CXX_HOME=$HOME/netcdf-cxx-4.2
-export NETCDF_FORTRAN_HOME=$HOME/netcdf-fortran-4.4.4
+#export NETCDF_C_HOME=$HOME/netcdf-c-4.6.1
+#export NETCDF_CXX_HOME=$HOME/netcdf-cxx-4.2
+#export NETCDF_FORTRAN_HOME=$HOME/netcdf-fortran-4.4.4
+
+# Set base paths for your NetCDF installations
+export NETCDF_C_HOME=$HOME
+export NETCDF_CXX_HOME=$HOME
+export NETCDF_FORTRAN_HOME=$HOME
 
 # Include headers for compilation
 export CPPFLAGS="-I$NETCDF_C_HOME/include -I$NETCDF_CXX_HOME/include -I$NETCDF_FORTRAN_HOME/include"
@@ -156,6 +163,6 @@ cp $HOME/cgenie.muffin.mix/runmuffin-to-go.sh $HOME/cgenie.muffin/genie-main/run
 chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
 
 echo "testing cGENIE.muffin..."
-cd cgenie.muffin/genie-main
+cd $HOME/cgenie.muffin/genie-main
 make cleanall
 make testbiogem
