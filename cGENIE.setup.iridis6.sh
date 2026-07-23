@@ -158,7 +158,7 @@ export PATH="$NETCDF_C_HOME/bin:$NETCDF_CXX_HOME/bin:$NETCDF_FORTRAN_HOME/bin:$P
 
 # copy key functions over for running the model
 cp $HOME/cgenie.muffin.mix/runmuffin-to-go-w-receipt.sh $HOME/cgenie.muffin/genie-main/runmuffin-to-go-w-receipt.sh
-chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
+chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-to-go-w-receipt.sh
 cp $HOME/cgenie.muffin.mix/runmuffin-to-go.sh $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
 chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
 
