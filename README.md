@@ -49,10 +49,10 @@ This is especially important to do before running cGENIE.setup.sh!
 
 # Notes on IRIDIS 6 (beta version v2)
 
-git clone https://github.com/derpycode/cgenie.muffin.git
-git clone https://github.com/richardstockey/cgenie.muffin.mix.git
-cd cgenie.muffin.mix
-chmod +x cGENIE.setup.iridis6.sh
-./cGENIE.setup.iridis6.sh
+git clone https://github.com/derpycode/cgenie.muffin.git; 
+git clone https://github.com/richardstockey/cgenie.muffin.mix.git; 
+cd cgenie.muffin.mix; 
+chmod +x cGENIE.setup.iridis6.sh; 
+./cGENIE.setup.iridis6.sh; 
  
 

@@ -163,6 +163,8 @@ cp $HOME/cgenie.muffin.mix/runmuffin-to-go.sh $HOME/cgenie.muffin/genie-main/run
 chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
 cp $HOME/cgenie.muffin.mix/cgenie.muffin.scratch.clones.parallel.sh $HOME/cgenie.muffin/genie-main/cgenie.muffin.scratch.clones.parallel.sh
 chmod +x $HOME/cgenie.muffin/genie-main/cgenie.muffin.scratch.clones.parallel.sh
+cp $HOME/cgenie.muffin.mix/runmuffin-basket.sh $HOME/cgenie.muffin/genie-main/runmuffin-basket.sh
+chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-basket.sh
 
 # make cgenie.jobs DIRECTORY
 mkdir $HOME/cgenie.jobs
