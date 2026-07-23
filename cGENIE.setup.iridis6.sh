@@ -104,7 +104,6 @@ make install
 cd $HOME
 
 # Load compiler and environment
-module purge
 module load gcc/13.2.0
 
 #export NETCDF_HOME=$HOME/netcdf-c-4.6.1
