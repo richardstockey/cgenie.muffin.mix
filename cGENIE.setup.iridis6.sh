@@ -162,6 +162,9 @@ chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-to-go-w-receipt.sh
 cp $HOME/cgenie.muffin.mix/runmuffin-to-go.sh $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
 chmod +x $HOME/cgenie.muffin/genie-main/runmuffin-to-go.sh
 
+# make cgenie.jobs DIRECTORY
+mkdir $HOME/cgenie.jobs
+
 echo "testing cGENIE.muffin..."
 cd $HOME/cgenie.muffin/genie-main
 make cleanall
