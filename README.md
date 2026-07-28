@@ -54,5 +54,10 @@ git clone https://github.com/richardstockey/cgenie.muffin.mix.git;
 cd cgenie.muffin.mix; 
 chmod +x cGENIE.setup.iridis6.sh; 
 ./cGENIE.setup.iridis6.sh; 
+
+
+OR, for example, for your own fork: 
+
+git clone --branch scratch https://github.com/richardstockey/cgenie.muffin/; git clone https://github.com/richardstockey/cgenie.muffin.mix.git; cd cgenie.muffin.mix; chmod +x cGENIE.setup.iridis6.sh; ./cGENIE.setup.iridis6.sh;
  
 
